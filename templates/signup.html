@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.signup-box {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1b2a41, #243b55, #3a6073);
+  box-shadow: 0 0 25px rgba(254, 218, 106, 0.6);
+  font-family: "Times New Roman", serif;
+  color: #feda6a;
+  transition: box-shadow 0.3s ease;
+}
+
+.signup-box:hover {
+  box-shadow: 0 0 35px rgba(254, 218, 106, 0.8);
+}
+
+.signup-box h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px #000;
+}
+
+.signup-box form {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="password"],
+.signup-box input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #feda6a;
+  border-radius: 10px;
+  background-color: #0f172a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.signup-box input:focus {
+  box-shadow: 0 0 12px #feda6a;
+  border-color: #feda6a;
+}
+
+.signup-box .submit {
+  background-color: #feda6a;
+  color: #243b55;
+  border: none;
+  width: 100%;
+  max-width: 180px;
+  height: 45px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px auto 0 auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.signup-box .submit:hover {
+  background-color: #ffcc00;
+  color: #000;
+  box-shadow: 0 0 20px #feda6a;
+}
+
+.signup-box a {
+  color: #feda6a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-box a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 20px;
+  }
+
+  .signup-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .signup-box input[type="text"],
+  .signup-box input[type="password"],
+  .signup-box input[type="email"] {
+    font-size: 0.95rem;
+  }
+
+  .signup-box .submit {
+    height: 42px;
+    font-size: 1rem;
+  }
+}
+</style>
+
+<div class="signup-box">
+  <h2>Sign Up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="submit" type="submit" value="Sign Up">
+  </form>
+  <p style="text-align:center; margin-top:20px; font-size:1rem;">
+    Already have an account? <a href="{% url 'login' %}">Log In</a>
+  </p>
+</div>
+{% endblock %}

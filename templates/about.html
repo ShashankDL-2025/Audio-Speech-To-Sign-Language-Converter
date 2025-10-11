@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+.about-section {
+  background: linear-gradient(135deg, #1b2a41, #243b55, #3a6073);
+  color: #feda6a;
+  padding: 25px;
+  margin: 40px auto;
+  border-radius: 20px;
+  width: 85%;
+  box-shadow: 0 0 25px rgba(254, 218, 106, 0.6);
+  font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+  transition: box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  box-shadow: 0 0 35px rgba(254, 218, 106, 0.8);
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #feda6a;
+  text-shadow: 2px 2px 8px #000;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.team-section {
+  margin-top: 30px;
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(254, 218, 106, 0.4);
+}
+
+.team-section h3 {
+  color: #feda6a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.member {
+  background-color: #0f172a;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 230px;
+  border: 1px solid #feda6a;
+  box-shadow: 0 0 15px rgba(254, 218, 106, 0.5);
+  transition: all 0.3s ease;
+}
+
+.member:hover {
+  transform: scale(1.05);
+  background-color: #16213e;
+  box-shadow: 0 0 25px #feda6a;
+}
+
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #feda6a;
+  margin-bottom: 15px;
+}
+
+.member h4 {
+  color: #feda6a;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.member p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .member {
+    width: 80%;
+  }
+
+  .about-section {
+    width: 90%;
+    padding: 15px;
+  }
+}
+</style>
+
+<div class="about-section">
+  <h2>About Speak To 3D-Sign Language Translator</h2>
+  <p>
+    The <b>Speak To 3D-Sign Language Translator</b> is an innovative web application designed to promote inclusive communication
+    for the deaf and hard-of-hearing community. It intelligently converts spoken or typed words into Indian Sign Language
+    (ISL) animations, ensuring that users can understand and interact seamlessly with others. This project integrates
+    <b>Natural Language Processing (NLP)</b> and <b>3D animated sign rendering</b> to provide real-time visual output.
+    Our goal is to enhance accessibility, bridge communication barriers, and empower individuals through technology-driven
+    solutions. We believe in using AI for social good creating tools that not only showcase innovation but also make a
+    real difference in people’s lives.
+  </p>
+
+  <div class="team-section">
+    <h3>Meet Our Team</h3>
+    <div class="team-container">
+      <div class="member">
+        <h4>Shashank D L</h4>
+        <p>Project Lead & Developer<br>B.E in Computer Science<br>NCE, Hassan</p>
+      </div>
+      <div class="member">
+        <h4>Vinay Gowda N</h4>
+        <p>Developer & Designer<br>B.E in Computer Science<br>NCE, Hassan</p>
+      </div>
+      <div class="member">
+        <h4>Dakshayini V K</h4>
+        <p>Researcher & Content Writer<br>B.E in Computer Science<br>NCE, Hassan</p>
+      </div>
+      <div class="member">
+        <h4>Yashashwini T G</h4>
+        <p>Researcher & Content Writer<br>B.E in Computer Science<br>NCE, Hassan</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

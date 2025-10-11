@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+.contact-section {
+  background: linear-gradient(135deg, #1b2a41, #243b55, #3a6073);
+  color: #feda6a;
+  padding: 25px;
+  margin: 40px auto;
+  border-radius: 20px;
+  width: 80%;
+  box-shadow: 0 0 25px rgba(254, 218, 106, 0.6);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-section:hover {
+  box-shadow: 0 0 35px rgba(254, 218, 106, 0.8);
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  color: #feda6a;
+  text-shadow: 2px 2px 8px #000;
+  margin-bottom: 15px;
+}
+
+.contact-section hr {
+  border: none;
+  height: 2px;
+  background: #feda6a;
+  margin: 25px auto;
+  width: 70%;
+  box-shadow: 0 0 10px #feda6a;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-section ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.contact-section li {
+  background-color: #0f172a;
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 1px solid #feda6a;
+  box-shadow: 0 0 15px rgba(254, 218, 106, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-section li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #feda6a;
+  background-color: #16213e;
+}
+
+.contact-section li p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .contact-section li {
+    padding: 10px 15px;
+  }
+}
+</style>
+
+<div class="contact-section">
+  <h2>CONTACT US</h2>
+  <p>For any queries regarding this website, reach out to us at:</p>
+
+  <hr>
+
+  <h2>OUR TEAM</h2>
+  <ul>
+    <li>
+      <p><b>Shashank D L</b> — Team Lead & Developer</p>
+      <p>Email: dlshashank0@gmail.com</p>
+    </li>
+    <li>
+      <p><b>Vinay Gowda N</b> — Developer & Designer</p>
+      <p>Email: vinaygowda@gmail.com</p>
+    </li>
+    <li>
+      <p><b>Dakshayini V K</b> — Researcher & Content Writer</p>
+      <p>Email: dakshayinidakshu890@gmail.com</p>
+    </li>
+    <li>
+      <p><b>T G Yashashwini</b> — Researcher & Content Writer</p>
+      <p>Email: yashashwini805@gmail.com</p>
+    </li>
+  </ul>
+
+  <hr>
+  <p>Thank you for visiting our website!</p>
+</div>
+{% endblock %}
